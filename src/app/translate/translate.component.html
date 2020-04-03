@@ -1,0 +1,63 @@
+<div class="container" style="text-align:center">
+  
+    <div class="row">
+
+        <div class="col-sm-12" style="padding-top: 50px;">
+            <p>Press microphone icon to start recording your voice. The recording will stop automatically when you stop speaking.</p>
+        </div>
+    
+      <div class="col-sm-6" style="padding-top: 50px;">
+  
+        <div class="form-group">
+          <h4>Spoken Text</h4>
+          <textarea class="form-control" name="" id="spokentext" rows="5" readonly style="box-shadow: 2px 5px 5px 3px rgb(124, 123, 123);"></textarea>
+        </div>
+  
+        <div class="dropdown" align="right" style="padding: 0%!important;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {{testspoken.name}}
+                  </button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">
+      
+              <div *ngFor="let language of languages">
+      
+                  <a *ngIf="!(language.language===testspoken.language)" class="dropdown-item" (click)="selectSpokenLanguage(language)">{{language.name}}</a>
+      
+              </div>
+          </div>
+        </div>
+  
+      </div>
+    
+      <div class="col-sm-6" style="padding-top: 50px;">
+        
+         <div class="form-group">
+           <h4>Translated Text</h4>
+           <textarea class="form-control" name="" id="translatedtext" rows="5" readonly style="box-shadow: 2px 5px 5px 3px rgb(124, 123, 123);"></textarea>
+         </div>
+  
+         <div class="dropdown" align="right" style="padding: 0%!important;">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {{testtranslate.name}}
+                  </button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">
+      
+              <div *ngFor="let language of languages">
+      
+                  <a *ngIf="!(language.language===testtranslate.language)" class="dropdown-item" (click)="selectTranslateLanguage(language)">{{language.name}}</a>
+      
+              </div>
+          </div>
+        </div>
+  
+      </div>
+
+      <div class="col-sm-12" style="padding-top: 50px;">
+        <!-- <a name="" id="recordbutton" class="btn btn-primary" href="#" role="button" (click)="startlistening()">Press to record</a> -->
+        <i class="fa fa-microphone microphone-icon fa-3x rounded-circle" id="microphone-icon" (click)="startlistening()"></i>
+        <h4 id="recordbutton">Press to Record</h4>
+      </div>
+    
+    </div>
+  
+  </div>

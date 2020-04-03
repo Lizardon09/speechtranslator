@@ -1,0 +1,40 @@
+.row{
+    padding-bottom: 50px;
+  }
+    
+  .dropdown-menu{
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+.microphone-icon{
+    color: red;
+    background: white;
+    padding: 10px;
+    /* border: solid 1px black; */
+    box-shadow: 2px 5px 5px 3px rgb(124, 123, 123);
+    border-radius: 50px!important;
+    margin-bottom: 12px;
+}
+
+.microphone-icon:hover{
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);;
+    opacity: .4;
+    cursor: pointer;
+}
+
+div.container{
+    background-color: white;
+}
+
+.btn{
+    background: transparent!important;
+    color:#333333;
+    box-shadow: 2px 4px 4px 1px rgb(124, 123, 123);
+}
+
+.btn:hover{
+    background: #333333;
+}
